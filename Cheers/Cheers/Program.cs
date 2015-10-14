@@ -15,9 +15,8 @@ namespace Cheers
             foreach (char letter in name)
             {
                 if (letter == 'e' || letter == 'a' || letter == 'i' || letter == 'o' || letter == 'u')
-                {
-                    
-                    System.Console.WriteLine("Give me an.. " + char.ToLower(letter));
+                {   
+                System.Console.WriteLine("Give me an.. " + char.ToLower(letter));
                 }
                 else
                 {
