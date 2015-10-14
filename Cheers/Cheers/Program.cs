@@ -12,19 +12,23 @@ namespace Cheers
         {
             System.Console.WriteLine("Hello! What's your name?");
             String name = System.Console.ReadLine();
-            foreach (char letter in name)
+            foreach (char letter in name.ToLower())
             {
-                if (letter == 'e' || letter == 'a' || letter == 'i' || letter == 'o' || letter == 'u')
-                {   
-                System.Console.WriteLine("Give me an.. " + char.ToLower(letter));
-                }
-                else
+                if (Char.IsLetter(letter))
                 {
-                    System.Console.WriteLine("Give me a.. " + char.ToLower(letter));
+                    if (letter == 'e' || letter == 'a' || letter == 'i' || letter == 'o' || letter == 'u')
+                    {
+                        System.Console.WriteLine("Give me an.. " + letter);
+                    }
+                    else
+                    {
+                        System.Console.WriteLine("Give me a.. " + letter);
+                    }
                 }
             }
             System.Console.WriteLine(name.ToUpper() + "'s just GRAND!");
             System.Console.WriteLine("Press any key to exit.");
+            System.Console.WriteLine("Where is the \"any\" key?");
             System.Console.ReadKey();
         }
     }
